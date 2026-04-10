@@ -77,6 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			button.classList.toggle('active', button.dataset.language === currentLang);
 		});
 
+		const downloadBtn = document.getElementById('download-cv');
+		if (downloadBtn) {
+			// Construimos el nombre del archivo dinámicamente
+			const fileName = `CV_Lidia_Andrade_${currentLang.toUpperCase()}.pdf`;
+			downloadBtn.setAttribute('href', fileName);
+		}
+
 		const elements = document.querySelectorAll('[data-i18n]');
 		elements.forEach(el => {
 			const key = el.getAttribute('data-i18n');
