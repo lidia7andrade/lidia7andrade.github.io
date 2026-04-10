@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const downloadBtn = document.getElementById('download-cv');
 		if (downloadBtn) {
 			// Construimos el nombre del archivo dinámicamente
-			const fileName = `CV_Lidia_Andrade_${currentLang.toUpperCase()}.pdf`;
+			const fileName = `./assets/CV_Lidia_Andrade_${currentLang.toUpperCase()}.pdf`;
 			downloadBtn.setAttribute('href', fileName);
 		}
 
